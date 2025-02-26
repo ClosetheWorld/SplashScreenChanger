@@ -33,16 +33,16 @@ namespace SplashScreenChanger
             }
         }
 
-        private async void applyButton_Click(object sender, EventArgs e)
+        private void applyButton_Click(object sender, EventArgs e)
         {
-            await SaveImageAsync();
+            SaveImage();
 
             MessageBox.Show("äÆóπÇµÇ‹ÇµÇΩÅI", "äÆóπ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 
         #region Methods
-        private async Task SaveImageAsync()
+        private void SaveImage()
         {
             using var fs = new FileStream(@"SplashScreen.png", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             _scaledImage.Save(fs, ImageFormat.Png);
