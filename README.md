@@ -1,1 +1,1 @@
-# AvatarManager
+# SplashScreenChanger
